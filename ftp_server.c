@@ -51,7 +51,7 @@ int main(int argc, char *argv[]) {
 	len = sizeof(client);
 	sock2 = accept(sock1, (struct sockaddr*)&client, &len);
 
-	printf("Client Accept... \n");
+	printf("Client Accept... \nClient IP: %s\n", inet_ntoa(client.sin_addr));
 	i = 1;
 	while(1) {
 		memset(buf, 0, sizeof(buf));
